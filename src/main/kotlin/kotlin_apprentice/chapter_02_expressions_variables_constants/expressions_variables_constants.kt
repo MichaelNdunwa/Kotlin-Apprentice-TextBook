@@ -22,7 +22,7 @@ fun main() {
 
     // Shift Operations:
     println("1 shift left 3 = ${1 shl 3}")
-    println("32 shift right = ${32 shr 2}")
+    println("32 shift right 2 = ${32 shr 2}")
 
     // Increment and Decrement
     var counter: Int = 0

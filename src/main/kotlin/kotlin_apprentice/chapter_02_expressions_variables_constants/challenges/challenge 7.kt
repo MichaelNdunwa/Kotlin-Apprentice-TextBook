@@ -12,8 +12,34 @@ fun main() {
     // rows are numbered tb == 0 to 7
     // columns are numbered lr == 0 to 7
     val position = 4
-    val row: Int
-    val column: Int
+    val row = 1
+    val column = 5
+
 
     // I don't know how to solve this question yet, but i will till figure it out.
+    findPosition(63)
+}
+
+fun findPosition(position: Int) {
+    val position = position
+    var row = -2; var column = -2
+
+    for (r in 0 until 8) {
+        for (c in 0 until 8) {
+            if (r * 8 + c == position) {
+                row = r
+                column = c
+                break
+            }
+        }
+        if (row != -2) {
+            break
+        }
+    }
+
+    if (row != -2 && column != -2) {
+        println("$position is on Row: $row and Column: $column.")
+    } else {
+        println("Invalid position: $position")
+    }
 }
