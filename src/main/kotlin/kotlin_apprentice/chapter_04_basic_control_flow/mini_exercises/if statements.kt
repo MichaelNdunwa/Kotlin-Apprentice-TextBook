@@ -7,7 +7,7 @@ fun main() {
      */
 
     val myAge = 21
-    if (myAge in 13..19) {
+    if ((13..19).contains(myAge)) {
         println("Teenager.")
     } else {
         println("Not a teenager.")
@@ -18,6 +18,6 @@ fun main() {
      *      print out for the same cases in the above exercise. Then print out answer.
      */
 
-    val answer = if (myAge in 13..19) "Teenager." else "Not a teenager."
+    val answer = if ((13..19).contains(myAge)) "Teenager." else "Not a teenager."
     println(answer)
 }

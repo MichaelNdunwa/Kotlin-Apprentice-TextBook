@@ -1,6 +1,6 @@
 package kotlin_apprentice.chapter_03_types_and_operations.mini_exercises
 
-fun main() {
+fun main(): Unit {
     /**
      * 1. Declare a constant Triple that contains three Int values. Use this to represent a date (month, day, year).
      */
@@ -18,3 +18,4 @@ fun main() {
      */
 
 }
+

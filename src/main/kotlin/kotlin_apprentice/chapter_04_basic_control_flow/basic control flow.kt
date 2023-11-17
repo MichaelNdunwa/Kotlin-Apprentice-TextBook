@@ -67,4 +67,42 @@ fun main() {
         "INVALID HOUR!"
     }
     println(timeOfDay)
+
+    // Encapsulating Variables:
+    /***
+     * Imagine you want to calculate the fee to charge your client. Here's the deal you've made:
+     *      You earn $25 for every hour up to 40 hours, and $50 for every hour thereafter.
+     */
+    var hoursWorked = 45
+    var price = 0
+    if (hoursWorked > 40) {
+        val hoursOver40 = hoursWorked - 40
+        price += hoursOver40 * 50
+        hoursWorked -= hoursOver40
+    }
+    price += hoursWorked * 25
+    println("After calculating the hours you have worked i will pay you $${price}")
+
+
+    // While Loops:
+    var sum = 1
+    while (sum < 1000) {
+        sum += sum + 1
+    }
+
+    // Repeat-While Loops
+    // do-while loop:
+    sum = 1
+    do {
+        sum += sum + 1
+    } while (sum < 1000)
+
+    // Breaking out of a loop
+    sum = 1
+    while (true) {
+        sum += sum + 1
+        if (sum >= 1000) {
+            break
+        }
+    }
 }

@@ -16,6 +16,12 @@ fun main() {
     // column are numbered left to right, 0 to 7
     // next position = ? (am asked to find the next position)
 
-    val nextPosition: Int
+    val currentPosition = 4
+    var nextPosition = -1
+    var row = currentPosition / 8
+    var column = currentPosition % 8
 
+    var currentRow = 4
+    var currentColumn = 2
+    println("The next position on the chessboard is row: ${++currentRow} and column: ${++currentColumn}")
 }
