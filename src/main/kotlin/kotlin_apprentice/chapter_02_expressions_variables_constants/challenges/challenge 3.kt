@@ -10,9 +10,10 @@ fun main() {
     val a: Int = 46
     val b: Int = 10
     // 1
-    val answer1: Int = (a * 100) + b // (46 * 100) + 10 = 4_600
+    val answer1: Int = (a * 100) + b // (46 * 100) + 10 = 4_610
     // 2
     val answer2: Int = (a * 100) + (b * 100) // (46 * 100) + (10 * 100) = 5_600
     // 3
     val answer3: Int = (a * 100) + (b / 10) // (46 * 100) + (10 / 10) = 4_601
+
 }

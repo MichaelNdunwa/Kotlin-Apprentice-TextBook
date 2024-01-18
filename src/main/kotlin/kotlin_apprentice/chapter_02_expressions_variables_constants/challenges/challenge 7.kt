@@ -17,11 +17,12 @@ fun main() {
 
 
     // I don't know how to solve this question yet, but i will till figure it out.
+    // I have
     findPosition(63)
 }
 
 fun findPosition(position: Int) {
-    val position = position
+//    val position = position
     var row = -2; var column = -2
 
     for (r in 0 until 8) {

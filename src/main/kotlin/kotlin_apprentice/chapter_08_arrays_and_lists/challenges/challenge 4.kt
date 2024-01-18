@@ -13,8 +13,7 @@ fun reverse(array: Array<Int>): Array<Int> {
     var newArray = arrayOf<Int>()
     var arraySize = array.size - 1
     while (arraySize >= 0) {
-        newArray += array[arraySize]
-        arraySize--
+        newArray += array[arraySize--]
     }
     return newArray
 }
