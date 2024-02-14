@@ -43,4 +43,15 @@ fun main(){
     val coordinatesWithTo = 2 to 3
     val coordinatesDoubles = Pair(2.1, 3.5)
     val coordinatesMixed = Pair(2.1, 3)
+
+    // Accessing data inside a Pair:
+    val x1 = coordinates.first
+    val y1 = coordinates.second
+    val (x, y) = coordinates
+
+
+    // Triple
+    val coordinates3D = Triple(2, 3, 1)
+    val (x3, y3, z3) = coordinates3D
+    val (_, y4, z4) = coordinates3D
 }

@@ -17,6 +17,7 @@ package kotlin_apprentice.chapter_02_expressions_variables_constants.challenges
 // columns are numbered left to right 0 to 7.
 
 object Chessboard {
+
     fun findRowAndColumn(position: Int): String {
         var item = 0
         for (row in 0..7) {

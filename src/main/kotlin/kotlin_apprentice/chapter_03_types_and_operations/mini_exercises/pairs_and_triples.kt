@@ -5,7 +5,9 @@ fun main(): Unit {
      * 1. Declare a constant Triple that contains three Int values. Use this to represent a date (month, day, year).
      */
     val date = Triple(9, 28, 2022)
-    // 2. Extract the values in the triple into three constants named month, day and year.
+    /**
+    * 2. Extract the values in the triple into three constants named month, day and year.
+    * */
     val (month, day , year) = date
     /** 3. In one line, read the month and year values into two constants. You'll need to employ the underscore to
      *      ignore the day.
@@ -16,6 +18,9 @@ fun main(): Unit {
      *      step three, modify the month value and create a new Pair containing the modified month along with the
      *      unmodified year.
      */
+    var (newMonth, _, newYear) = date
+    newMonth = 2; newYear = 2024
+    val modifiedDate = Pair(newMonth, newYear)
 
 }
 

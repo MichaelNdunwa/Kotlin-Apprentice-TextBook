@@ -17,7 +17,7 @@ fun main() {
 
 
     // I don't know how to solve this question yet, but i will till figure it out.
-    // I have
+    // I have solved it check 'resolve challenge.kt' 18th Jan, 2024.
     findPosition(63)
 }
 
