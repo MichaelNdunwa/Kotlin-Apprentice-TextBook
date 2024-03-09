@@ -1,7 +1,9 @@
 package kotlin_apprentice.chapter_06_functions
 
 fun main() {
-    // FUNCTION BASICS:
+    /*******************
+     * FUNCTION BASICS *
+     *******************/
     fun printMyName() = println("My name is Joe Howard.")
 
     // FUNCTION PARAMETERS:
@@ -32,9 +34,20 @@ fun main() {
 //    println(function(4, 3))
 
     // ASSIGNING FUNCTION TO FUNCTION:
-    fun printResult(function: (Int, Int) -> Int, a: Int, b: Int) {
+    fun printResult(function: (Int, Int) -> Int, a: Int, b: Int, y: Int) {
         val result = function(a, b)
         print(result)
     }
-    printResult(::add, 4, 2)
+    printResult(::add, 4, 2, 3)
+
+
+    /*************************
+     * The land of no return *
+     *************************/
+
+    fun infiniteLoop(): Nothing {
+        while (true) {
+
+        }
+    }
 }

@@ -12,5 +12,5 @@ fun main() {
         sum += i
         iteration++
     }
-    println("It will have $iteration iterations.")
+    println("sum = $sum and  $iteration iterations.")
 }

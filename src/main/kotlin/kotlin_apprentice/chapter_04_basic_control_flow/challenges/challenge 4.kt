@@ -8,19 +8,27 @@ package kotlin_apprentice.chapter_04_basic_control_flow.challenges
  */
 
 import kotlin.math.*
-fun quadraticEquation(a: Double, b: Double, c: Double): String {
-    var (a, b, c) = Triple(a, b, c)
-    // when a = 0: undefined.
-    if (a == 0.0) return "undefined."
 
-    // Solve for +:
-    val plus = (-(b) + sqrt(b.pow(2) - 4 * a * c)) / (2 * a)
-    val minus = (-(b) - sqrt(b.pow(2) - 4 * a * c)) / (2 * a)
+object Challenge4 {
 
-    return "x1: $plus and x2: $minus"
+    fun quadraticEquation(a: Double, b: Double, c: Double): String {
+        var (a, b, c) = Triple(a, b, c)
+        // when a = 0: undefined.
+        if (a == 0.0) {
+            val x = -b / (2 * a)
+            return "Both solutions are $x"
+        }
+
+        // Solve for +:
+        val positiveX = (-(b) + sqrt(b.pow(2) - 4 * a * c)) / (2 * a)
+        val negativeX = (-(b) - sqrt(b.pow(2) - 4 * a * c)) / (2 * a)
+
+        return "x1: $positiveX and x2: $negativeX"
+    }
 }
 
 fun main() {
+
     print("Enter a: ")
     val a = readLine()!!.toDouble()
     print("Enter b: ")
@@ -28,5 +36,5 @@ fun main() {
     print("Enter c: ")
     val c = readLine()!!.toDouble()
 
-    println(quadraticEquation(a, b, c))
+    println(Challenge4.quadraticEquation(a, b, c))
 }

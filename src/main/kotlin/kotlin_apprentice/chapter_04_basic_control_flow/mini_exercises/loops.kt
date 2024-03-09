@@ -14,6 +14,7 @@ fun main() {
 //        println("counter is ${counter++}")
 //    }
 
+
     /**
      * 2. Create a variable named counter and set it equal to 0. Create another variable named roll and set it equal to
      *      0. Create a do-while loop.

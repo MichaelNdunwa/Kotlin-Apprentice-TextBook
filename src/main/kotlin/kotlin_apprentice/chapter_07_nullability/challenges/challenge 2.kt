@@ -28,11 +28,20 @@ private fun divideIfWhole(value: Int, divisor: Int): Int? {
     return null
 }
 
+
 fun main() {
     val answer: Int? = divideIfWhole(10, 3)
     if (answer != null) {
         println("Yep, it divides $answer times.")
     } else {
         println("Not divisible 🙁")
+    }
+}
+
+fun divideIfWholeA(value: Int, divisor: Int): String {
+    return if ((value % divisor) == 0) {
+        "Yep, it divides ${value / divisor} times."
+    } else {
+        "Not divisible :["
     }
 }

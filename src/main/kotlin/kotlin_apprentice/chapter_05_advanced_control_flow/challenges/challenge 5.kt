@@ -7,7 +7,12 @@ package kotlin_apprentice.chapter_05_advanced_control_flow.challenges
 fun main() {
     var counter = 10
     while (counter >= 0) {
-        print("$counter ")
-        counter--
+        print("${counter--} ")
+    }
+
+    println("\n")
+    // Solution Two:
+    for (i in 0..10) {
+        print("${10 - i} ")
     }
 }

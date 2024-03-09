@@ -4,24 +4,27 @@ fun main(michael: Array<String>) {
     val myArray = arrayOf("Anna", "Bob", "Cindy", 1, 2)
 
     /*** CREATING ARRAYS ***/
+    println("CREATING ARRAYS:")
     val evenNumbers = arrayOf(2, 4, 6, 8)
     evenNumbers.forEach { println(it) }
-    val fiveFives = Array(3, {2})
-    fiveFives.forEach { println(it) }
-    println(evenNumbers)
-    println(fiveFives)
+    val threeFives = Array(3, {5}) // 5, 5, 5
+    val threeTwos = Array(size = 3) { 2 }
+    threeTwos.forEach { println(it) }
 
     val vowels = arrayOf("a", "e", "i", "o", "u")
 
     // arrays of primitive types:
     val oddNumbers = intArrayOf(1, 3, 5, 7)
-    val zeros = DoubleArray(4)
+    val zeros = DoubleArray(4) // 0.0, 0.0, 0.0, 0.0
     zeros.forEach { println(it) }
 
-    // array of object type:
+    // array of primitive type: how to convert object array to primitive array:
     val otherOddNumbers = arrayOf(1, 3, 5, 7).toIntArray()
 
+
+
     /*** ARGUMENTS TO MAIN() ***/
+    println("\nARGUMENTS TO MAIN():")
     // Iterating over an array:
     michael.forEach { println(it) }
 
@@ -38,6 +41,7 @@ fun main(michael: Array<String>) {
     val exoPlanets = mutableListOf<String>()
 
     /*** ACCESSING ELEMENTS ***/
+    println("\nACCESSING ELEMENTS:")
     // Using properties and methods:
     val players = mutableListOf("Michael", "Bob", "Cindy", "Dan")
     print(players.isEmpty())
@@ -47,6 +51,7 @@ fun main(michael: Array<String>) {
         println("Let's start!")
     }
     var currentPlayer = players.first()
+    println(currentPlayer)
     println(players.last())
 
     // minOrNull() and maxOrNull()
@@ -55,8 +60,12 @@ fun main(michael: Array<String>) {
         println("$minPlayer will start")
     }
 
-    println(arrayOf(2, 3, 1).first())
-    println(arrayOf(2, 3, 1).minOrNull())
+    val names = listOf<String>()
+    val minName = names.minOrNull() ?: "No name here, fvck off!!"
+    println(minName)
+
+    println(arrayOf(2, 3, 1).first())  // 2
+    println(arrayOf(2, 3, 1).minOrNull())  // 1
 
     val maxPlayer = players.maxOrNull()
     if (maxPlayer != null) {
@@ -70,20 +79,32 @@ fun main(michael: Array<String>) {
     println("Second player is $secondPlayer.")
 
     /*** USING RANGES TO SLICE ***/
+    println("\nUSING RANGES TO SLICE:")
     val upcomingPlayersSlice = players.slice(3 downTo 1)
     println(upcomingPlayersSlice.joinToString())
+    players.slice(1..2).forEach { println(it) }
 
     /*** CHECKING FOR AN ELEMENT ***/
-    fun isEliminated(player: String) = player !in player
+    println("\nCHECKING FOR AN ELEMENT:")
+    fun isEliminated(player: String) = player !in player  // player not in players
     println(isEliminated("Bod"))
-    players.slice(1..3).contains("Michael")
+    println(players.slice(1..3).contains("Michael"))
+    println(players.slice(1..3))
 
 
     /*** MODIFYING LISTS ***/
+    println("\nMODIFYING LISTS:")
     // Appending elements:
     players.add("Michael")
     players += "Anthony"
     println(players.joinToString())
+
+    /***
+     * While arrays are of fixed-size, you can in fact use the += operator with an array that is dedicated as var.
+     */
+    var array = arrayOf(1, 2, 3)
+    array += 4
+    println(array.joinToString())  // 1, 2, 3, 4
 
     var list = listOf(1, 2, 3)
     for (i in 4..6) {
@@ -91,7 +112,14 @@ fun main(michael: Array<String>) {
     }
     println(list.joinToString())
 
+    println("\nRemove list elements using range:")
+    println(list)
     list -= (2..5)
+    println(list.joinToString())
+
+    println("\nInsert list elements using range:")
+    println(list)
+    list += (2..5)
     println(list.joinToString())
 
     // Inserting Elements:
@@ -99,10 +127,15 @@ fun main(michael: Array<String>) {
     println(players.joinToString())
 
     // Removing Elements:
+    println("\nRemoving Elements:")
     val wasPlayerRemoved = players.remove("Gina")
     println("It is $wasPlayerRemoved that Gina was removed.")
     val removeMichael = players.remove("Michael")
     println("It is $removeMichael that Michael was removed.")
+
+    // removeAt() function:
+    val removedPlayer = players.removeAt(2)
+    println("$removedPlayer was removed")  // ______ was removed
 
 //    Mini-exercise:
     println("The position of Dan in the game is ${players.indexOf("Dan")}")
@@ -121,12 +154,21 @@ fun main(michael: Array<String>) {
     println(players.joinToString())
 
     players[3] = "Anna"
+    players.set(3, "Anna")
 
 
     /*** ITERATING THROUGH A LIST ***/
-
+    println("\nITERATING THROUGH A LIST:")
     val scores = listOf(2, 2, 8, 6, 1, 6)
 
+    // Using withIndex() function:
+    println("\nUsing withIndex() function:")
+    for ((index, player) in players.withIndex()) {
+        println("${index + 1}, $player")
+    }
+
+    // Using forEachIndexed {}:
+    println("\nUsing forEachIndexed {}:")
     players.forEachIndexed { index, player ->
         println("${index + 1}. $player")
     }

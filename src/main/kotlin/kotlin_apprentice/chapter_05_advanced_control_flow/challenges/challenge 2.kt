@@ -11,12 +11,14 @@ fun main() {
         aLotOfAs += "a"
     }
 
-    println(aLotOfAs)
-    println(aLotOfAs.length)
+    /*println(aLotOfAs)
+    println(aLotOfAs.length)*/
 
     /*var instancesOfA = ""
     for (i in 0..aLotOfAs.count()) {
         if (aLotOfAs[i] == 'a') instancesOfA += i
     }
     println(instancesOfA.count())*/
+    var instanceOfAs = aLotOfAs.count { it == 'a' }
+    println("There will be $instanceOfAs instance of \"a\" in 'aLotOfAs'.")
 }

@@ -64,20 +64,6 @@ fun main() {
     }
 
 
-    // RETURNING VALUES:
-    val number = 10
-    val numberName = when(number) {
-        2 -> "two"
-        4 -> "four"
-        6 -> "six"
-        8 -> "eight"
-        10 -> "ten"
-        else -> {
-            println("Unknown number")
-            "Unknown"
-        }
-    }
-    println(numberName)
 
     // LABELED STATEMENTS:
     // continue statement:
@@ -99,10 +85,20 @@ fun main() {
         counter--
     }*/
 
-//    val number = 10
+
+
+    /***********************
+     *  when expressions  *
+     *************************/
+
+    val number = 10
     when (number) {
         0 -> println("Zero")
         else -> println("Non-zero")
+    }
+
+    when (number) {
+        10 -> println("It's ten!")
     }
 
     val string = "Dog"
@@ -110,6 +106,22 @@ fun main() {
         "Cat", "Dog" -> println("Animal is a house pet.")
         else -> println("Animal is not a house pet.")
     }
+
+    // RETURNING VALUES:
+    val num = 10
+    val numberName = when(num) {
+        2 -> "two"
+        4 -> "four"
+        6 -> "six"
+        8 -> "eight"
+        10 -> "ten"
+        else -> {
+            println("Unknown number")
+            "Unknown"
+        }
+    }
+    println(numberName)
+
 
     // ADVANCED WHEN EXPRESSIONS:
     val hourOfDay = 12

@@ -13,7 +13,8 @@ package kotlin_apprentice.chapter_05_advanced_control_flow.mini_exercises
  * For example, for myself it would print out "Joe is an adult.".
  */
 
-fun lifeStage(name: String, age: Int) {
+fun lifeStage(person: Pair<String, Int>) {
+    val name = person.first; val age = person.second
     when (age) {
         in 0..2 -> println("$name is an infant")
         in 3..12 -> println("$name is a child")
@@ -23,4 +24,8 @@ fun lifeStage(name: String, age: Int) {
         in 61..Int.MAX_VALUE -> println("$name is an elderly")
         else -> println("Invalid age number.")
     }
+}
+
+fun main() {
+    lifeStage(Pair("Michael", 23))
 }

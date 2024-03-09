@@ -13,7 +13,8 @@ fun introducingNullableTypes() {
     var myFavoriteSong: String? = "New Boy in Town by Elmah"
     myFavoriteSong = null
 
-    // Number 2:
+    // Number 2 and 3:
+//    val parsedInt = "10".toIntOrNull()
     val parsedInt = "dog".toIntOrNull()
     println(parsedInt)
 
@@ -34,6 +35,11 @@ fun introducingNullableTypes() {
         println("$myFavoriteSong")
     } else {
         println("I don't have a favorite song.")
+    }
+
+    var songLength: Int
+    if (myFavoriteSong != null) {
+        songLength = myFavoriteSong.length
     }
 }
 

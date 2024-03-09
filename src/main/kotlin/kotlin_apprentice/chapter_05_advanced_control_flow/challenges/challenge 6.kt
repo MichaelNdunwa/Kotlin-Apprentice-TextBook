@@ -7,10 +7,10 @@ package kotlin_apprentice.chapter_05_advanced_control_flow.challenges
 fun main() {
     var counter = 0.0
     while (counter <= 1.0) {
-        if (counter < 0.9) {
+        if (counter <= 0.9) {
             print("${"%.1f".format(counter)}, ")
         } else {
-            print("%.1f".format(counter) + ".")
+            print("${"%.1f".format(counter)}.")
         }
         counter += 0.1
     }

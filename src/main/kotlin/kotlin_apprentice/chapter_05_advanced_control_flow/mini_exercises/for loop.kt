@@ -29,6 +29,34 @@ fun numberTwo() {
     }
 }
 
+fun numberThree() {
+    /***
+     * 3. Above, you saw a for loop which iterated over only the even rows like so:
+     *
+     * sum = 0
+     * for (row in 0 until 8) {
+     *      if (row % 2 == 0) {
+     *          continue
+     *      }
+     *      for (column in 0 until 8) {
+     *          sum += row * column
+     *      }
+     * }
+     *
+     * Change this to use a step clause on the first for loop to skip even rows instead of
+     * using continue. Check that the sum is 448 as in the initial example.
+     */
+
+    var sum = 0
+    for (row in 1 until 8 step 2) {
+        println(row)
+        for (column in 0 until 8) {
+            sum += row * column
+        }
+    }
+    println("sum is $sum")
+}
+
 fun main() {
-    numberTwo()
+    numberThree()
 }

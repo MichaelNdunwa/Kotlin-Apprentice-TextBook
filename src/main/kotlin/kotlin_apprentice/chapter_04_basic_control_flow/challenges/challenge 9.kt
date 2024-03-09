@@ -20,9 +20,22 @@ fun nFactorial(n: Int) {
 
         count++
     }
-    print(" = $factorial")
+    println(" = $factorial")
+}
+
+fun nFactorialSecondSolution(n: Int) {
+    var factorial = 1
+    var expression = "1 "
+    for (i in 2 until n) {
+        expression += "* $i "
+        factorial *= i
+    }
+    expression += "* $n"
+    factorial *= n
+    println("$n! : $expression = $factorial")
 }
 
 fun main() {
     nFactorial(4)
+    nFactorialSecondSolution(4)
 }

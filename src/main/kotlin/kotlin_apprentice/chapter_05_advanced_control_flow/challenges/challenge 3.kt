@@ -17,5 +17,5 @@ fun main() {
     // val (x, y, z) = Triple(2, 2, 2)  ->  x = y = z
     // val (x, y, z) = Triple(3, 0, 1)  ->  On the x/z plane
     // val (x, y, z) = Triple(3, 2, 5)  ->  Nothing special
-    // val (x, y, z) = Triple(0, 2, 4)  ->  Nothing special
+    // val (x, y, z) = Triple(0, 2, 4)  ->  On the y/z plane
 }

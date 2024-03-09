@@ -7,10 +7,8 @@ import kotlin.math.pow
  */
 
 fun first10PowerOf2() {
-   // var n = 0
     var power = 1
     for (p in 0..10) {
-        //println("2^$n => ${2.0.pow(n++)}")
         if (p == 0) {
             println("2^$p => 1.")
         } else {

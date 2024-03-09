@@ -8,7 +8,7 @@ package kotlin_apprentice.chapter_04_basic_control_flow.challenges
  */
 
 // Fibonacci Formula: Fn = Fn-1 + Fn-2, when n > 1
-fun fibonacci(n: Int) {
+fun fibonacciSolutionOne(n: Int) {
     val fibonacciSequence = mutableListOf(1, 1)
     if (n > 1) {
         for (i in 2 until n) {
@@ -21,11 +21,7 @@ fun fibonacci(n: Int) {
 
 }
 
-
-
-fun main() {
-    fibonacci(10)
-
+fun fibonacciSolutionTwo(n: Int) {
     val goal = 10
     var current = 1
     var previous = 1
@@ -37,4 +33,13 @@ fun main() {
         done += 1
     }
     println("Fibonacci number $goal is $current")
+}
+
+
+
+
+fun main() {
+    fibonacciSolutionOne(10)
+    fibonacciSolutionTwo(10)
+
 }
