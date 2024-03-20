@@ -14,9 +14,9 @@ fun remove(item: Int, list: List<Int>): List<Int> {
             list -= it
         }
     }*/
-    while(item in list) {
+    /*while(item in list) {
         list -= item
-    }
+    }*/
     return list
 }
 
